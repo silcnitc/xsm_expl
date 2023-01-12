@@ -6,10 +6,10 @@ userSP = SP;
 
 physicalSP = [PTBR +  ( userSP / 512 ) * 2] * 512 + (userSP % 512);
 
-data = [physicalSP - 3];
+data = [[PTBR+2*(userSP-3)/512]*512+(userSP-3)%512];
 
 print(data);
 
-[physicalSP - 1] = 0;
+[[PTBR+2*(userSP-1)/512]*512+(userSP-1)%512] = 0;
 
 ireturn;
