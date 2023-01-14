@@ -4,5 +4,5 @@
 spl/spl
 xsm_dev/xsm
 xfs-interface/xfs-interface
-xfs-interace/disk.xfs
+xfs-interface/disk.xfs
 bin/
