@@ -5,6 +5,7 @@
 #include <unistd.h>
 
 /* For command completion. */
+#include <stdio.h>
 #include <readline/readline.h>
 #include <readline/history.h>
 #include "interface.h"
