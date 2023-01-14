@@ -1,0 +1,6 @@
+*.o
+*.yy.*
+*.tab.*
+spl/spl
+xsm_dev/xsm
+xfs-interface/xfs-interface
