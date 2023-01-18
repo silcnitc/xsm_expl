@@ -1,10 +1,7 @@
 alias userSP R3;
-alias physicalSP R4;
-alias address R5;
+alias address R4;
 
 userSP = SP;
-
-physicalSP = [PTBR +  ( userSP / 512 ) * 2] * 512 + (userSP % 512);
 
 address = [[PTBR+2*(userSP-3)/512]*512+(userSP-3)%512];
 
