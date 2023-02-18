@@ -11,9 +11,11 @@
 #include "fileSystem.h"
 #include "exception.h"
 #include "diskUtility.h"
-
+#include <stdio.h>
 //declarations for macos
-int isspace();
+#ifdef __APPLE__
+    int isspace();
+#endif
 int loadShellCode();
 int loadLibraryCode();
 int loadIdleCode();
