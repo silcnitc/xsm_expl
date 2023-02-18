@@ -12,6 +12,18 @@
 #include "exception.h"
 #include "diskUtility.h"
 
+//declarations for macos
+int isspace();
+int loadShellCode();
+int loadLibraryCode();
+int loadIdleCode();
+int deleteFileFromDisk();
+int exportFile();
+int copyBlocksToFile();
+int dumpInodeTable();
+int dumpRootFile();
+int loadFileToVirtualDisk();
+
 
 jmp_buf exp_point;//for exception handling
 
