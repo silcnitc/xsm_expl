@@ -7,8 +7,13 @@ RMFLAGS = -v
 
 default: xsm
 
+LIBLEX = '-ll'
+ifeq ($(shell ldconfig -p|grep -qw libfl; echo $$?), 0)
+LIBLEX = '-lfl'
+endif
+
 xsm: lex.yy.o machine.o main.o simulator.o word.o memory.o registers.o tokenize.o disk.o debug.o exception.o
-	$(CC) $(CFLAGS) -o xsm lex.yy.o machine.o main.o simulator.o word.o memory.o registers.o tokenize.o disk.o debug.o exception.o -lfl
+	$(CC) $(CFLAGS) -o xsm lex.yy.o machine.o main.o simulator.o word.o memory.o registers.o tokenize.o disk.o debug.o exception.o $(LIBLEX)
 
 lex.yy.c: parse.l
 	$(LEX) parse.l
